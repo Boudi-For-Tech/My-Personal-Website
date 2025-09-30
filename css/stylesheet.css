@@ -2,9 +2,27 @@
     Start of Global Styles!
 */
 
+:root {
+    /*Light Theme Colors*/
+    --surface-container: #EDEDF4;
+    --on-surface: #191C20;
+    --primary: #415F91;
+    --on-primary: #FFFFFF;
+    --primaryContainer: #D6E3FF;
+    --onPrimaryContainer: #284777;
+    --surfaceVariant: #E0E2EC;
+    --onSurfaceVariant: #44474E;
+    --tertiary: #705575;
+    --box-color: #F0F0F7;
+    --on-box-color: #2E3036;
+    --inverseSurface: #2E3036;
+    --inverseOnSurface: #F0F0F7;
+    /*Dark Theme Colors*/
+
+}
+
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-
