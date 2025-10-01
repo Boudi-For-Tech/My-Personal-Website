@@ -4,21 +4,31 @@
 
 :root {
     /*Light Theme Colors*/
-    --surface-container: #EDEDF4;
-    --on-surface: #191C20;
-    --primary: #415F91;
-    --on-primary: #FFFFFF;
-    --primaryContainer: #D6E3FF;
-    --onPrimaryContainer: #284777;
-    --surfaceVariant: #E0E2EC;
-    --onSurfaceVariant: #44474E;
-    --tertiary: #705575;
-    --box-color: #F0F0F7;
-    --on-box-color: #2E3036;
-    --inverseSurface: #2E3036;
-    --inverseOnSurface: #F0F0F7;
+    --light-surface-container: #EDEDF4;
+    --light-on-surface: #191C20;
+    --light-primary: #415F91;
+    --light-on-primary: #FFFFFF;
+    --light-primaryContainer: #D6E3FF;
+    --light-onPrimaryContainer: #284777;
+    --light-surfaceVariant: #E0E2EC;
+    --light-onSurfaceVariant: #44474E;
+    --light-tertiary: #705575;
+    --light-box-color: #F0F0F7;
+    --light-on-box-color: #2E3036;
+    --light-inverseSurface: #2E3036;
+    --light-inverseOnSurface: #F0F0F7;
     /*Dark Theme Colors*/
-
+    --dark-surfaceContainerLow: #191C20;
+    --dark-onSurface: #E2E2E9;
+    --dark-onSurfaceVariant: #C4C6D0;
+    --dark-primary: #AAC7FF;
+    --dark-onPrimary: #0A305F;
+    --dark-tertiary: #DDBCE0;
+    --dark-surfaceVariant: #44474E;
+    --dark-inverseSurface: #E2E2E9;
+    --dark-inverseOnSurface: #2E3036;
+    --dark-primaryContainer: #284777;
+    --dark-onPrimaryContainer: #D6E3FF;
 }
 
 * {
