@@ -65,11 +65,8 @@ body[data-theme="dark"] {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    text-align: center;
 }
+
 @media (min-width: 1024px) {
     .container {
         padding-left: 96px;
@@ -87,4 +84,80 @@ body[data-theme="dark"] {
         grid-template-columns: repeat(12, 1fr);
         column-gap: 24px;
     }
+}
+/*End of Global Rules*/
+.navBar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-surface-container);
+    box-shadow: var(--light-shadow-1);
+    font-weight: bold;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    transition: all .3s;
+}
+body[data-theme="dark"] .navBar {
+    background-color: var(--dark-surfaceVariant);
+}
+body[data-theme="dark"] .navBar p {
+    color: var(--dark-onSurfaceVariant)
+}
+body[data-theme="dark"] .navBar i {
+    color: var(--dark-primary)
+}
+body[data-theme="dark"] .navBar img {
+    border-color: var(--dark-primary);
+}
+.navBar img {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--light-primary);
+    box-shadow: var(--light-shadow-1);
+}
+.navBar p {
+    margin: 0;
+    margin-right: auto;
+    font-size: 24px;
+}
+.navBar .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.navBar .icons i {
+    font-size: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: var(--light-primary);
+}
+.mode {
+    border: 2px solid var(--light-primary);
+    border-radius: 50%;
+    box-shadow: var(--light-shadow-1);
+    transition: all .3s;
+}
+.fa-sun {
+    padding: 5px;
+}
+.fa-moon {
+    padding: 5px 8px;
+} 
+.sideBar {
+    position: relative;
+    margin-top: -60px;
+    display: none;
+    z-index: 5;
+    background-color: var(--light-surface-container);
+    width: 50%;
+    height: 100vh;
+    box-shadow: var(--light-shadow-2);
+    transition: all .3s;
 }
