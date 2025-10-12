@@ -49,6 +49,7 @@ h1,h2,h3 {
 }
 body {
     font-family: "Montserrat", sans-serif;
+    transition: all .3s;
 }
 
 body[data-theme="light"] {
@@ -76,6 +77,19 @@ body[data-theme="dark"] {
     column-gap: 10px;
     justify-content: center;
     align-items: center;*/
+}
+.containerGrid {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media (min-width: 1024px) {
@@ -320,11 +334,11 @@ body[data-theme="dark"] a {
 @keyframes fading {
     0% {
         opacity: 0;
-        transform: scale(0.90) translateY(30px);
+        transform: scale(0.90) translateY(20px);
     }
     25% {
         opacity: 0.25;
-        transform: scale(0.92) translateY(20px);
+        transform: scale(0.92) translateY(15px);
     }
     50% {
         opacity: 0.50;
@@ -426,8 +440,10 @@ body[data-theme="dark"] {
     }
 }
 /*Hero Section End*/
+
 /*About Section Starts*/
 .specialDisplay {
+    color: var(--light-onSurfaceVariant);
     margin-bottom: 16px;
     font-size: 36px;
     line-height: 44px;
@@ -443,7 +459,7 @@ body[data-theme="dark"] {
     left: 50%;
     transform: translate(-50%);
     background-color: var(--light-primary);
-    bottom: -130px;
+    bottom: -298px;
 }
 .specialHeader {
     margin-top: 24px;
@@ -452,4 +468,77 @@ body[data-theme="dark"] {
     font-size: 16px;
     line-height: 24px;
 }
+.StartAbout {
+    margin-top: 36px;
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 44px;
+}
+.About p {
+    margin-bottom: 16px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    width: 111px;
+    padding: 18px 24px;
+    color: var(--light-on-primary);
+    background-color: var(--light-primary);
+    border-radius: 28px;
+    box-shadow: var(--light-shadow-1);
+}
+.skills {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    flex-direction: column;
+}
+.skills h2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 44px;
+}
+.skills .skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+}
+.skillList span {
+    background: var(--light-box-color);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+}
+body[data-theme="dark"] {
+    .specialDisplay {
+        color: var(--dark-onSurface);
+        text-shadow: 0 0 25px var(--dark-primary);
+    }
+    .main {
+        background: var(--dark-primary);
+        color: var(--dark-onPrimary);
+    }
+    .About h2 {
+        color: var(--dark-onSurface);
+    }
+    .About p {
+        color: var(--dark-onSurface);
+    }
+    .specialHeader {
+        color: var(--dark-tertiary);
+    }
+    .skillList span {
+        background-color: var(--dark-surfaceVariant);
+        color: var(--dark-onSurfaceVariant);
+    }
+}
 /*About Section Ends*/
+/*Projects Section Starts*/
+
+/*Projects Section Ends*/
