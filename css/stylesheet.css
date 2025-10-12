@@ -1,7 +1,12 @@
 /*
     Start of Global Styles!
 */
-
+p {
+    margin: 0;
+}
+h1,h2,h3 {
+    margin: 0;
+}
 :root {
     /*Light Theme Colors*/
     --light-surface-container: #EDEDF4;
@@ -61,7 +66,7 @@ body[data-theme="dark"] {
     margin-right: auto;
     max-width: 720px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,8 +97,12 @@ body[data-theme="dark"] {
     }
 }
 /*End of Global Rules*/
+/*NabBar Starts*/
 .navBar {
-    padding: 20px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 16px;
     display: flex;
     align-items: center;
     background-color: var(--light-surface-container);
@@ -139,6 +148,7 @@ body[data-theme="dark"] .navBar img {
     font-size: 24px;
     margin-left: 8px;
     color: var(--light-primary);
+    cursor: pointer;
 }
 .menu {
     margin-right: 8px;
@@ -251,6 +261,8 @@ body[data-theme="dark"] .sideBar .header p {
 body[data-theme="dark"] a {
     color: var(--dark-primary);
 }
+/*NabBar End*/
+/*Hero Section Starts*/
 .hero {
     display: flex;
     justify-content: center;
@@ -262,7 +274,7 @@ body[data-theme="dark"] a {
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--light-primary);
-    box-shadow: var(--light-shadow-1);
+    box-shadow: var(--light-shadow-5);
     margin-bottom: 36px;
 }
 .heroGreetings {
@@ -338,6 +350,7 @@ body[data-theme="dark"] a {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
     opacity: 0;
+    transition: all .3s;
 }
 .heroButtons a:nth-child(1) {
     animation-delay: .2s;
@@ -356,6 +369,9 @@ body[data-theme="dark"] a {
     }
 }
 .heroButtons .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     text-align: center;
     font-weight: 600;
@@ -374,10 +390,66 @@ body[data-theme="dark"] a {
     text-align: center;
     font-weight: 600;
     width: 111px;
-    padding: 18px 24px;
+    padding: 16px 24px;
     color: var(--light-onPrimaryContainer);
     background-color: #FFFFFF;
     border: 3px solid var(--light-primaryContainer);
     border-radius: 28px;
     box-shadow: var(--light-shadow-1);
 } 
+.heroButtons a:hover {
+    box-shadow: var(--light-shadow-3);
+}
+.heroButtons a:focus {
+    box-shadow: var(--light-shadow-2);
+}
+body[data-theme="dark"] {
+    .heroImg {
+        border-color: var(--dark-primary);
+    }
+    .heroGreetings {
+        color: var(--dark-primary);
+        text-shadow: 0 0 25px var(--dark-primary);
+    }
+    .heroP {
+        color: var(--dark-onSurfaceVariant)
+    }
+    .heroButtons a:nth-child(1) {
+        background: var(--dark-primary);
+        color: var(--dark-onPrimary);
+    }
+    .heroButtons a:nth-child(2) {
+        border: none;
+        padding: 18px 24px;
+        background: var(--dark-primaryContainer);
+        color: var(--dark-onPrimaryContainer);
+    }
+}
+/*Hero Section End*/
+/*About Section Starts*/
+.specialDisplay {
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    text-shadow: 0 0 25px var(--light-primary);
+}
+.specialDisplay::after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 5px;
+    border-radius: 8px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--light-primary);
+    bottom: -130px;
+}
+.specialHeader {
+    margin-top: 24px;
+    color: var(--light-tertiary);
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+}
+/*About Section Ends*/
