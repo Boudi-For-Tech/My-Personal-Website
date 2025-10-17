@@ -1,12 +1,6 @@
 /*
     Start of Global Styles!
 */
-p {
-    margin: 0;
-}
-h1,h2,h3 {
-    margin: 0;
-}
 :root {
     /*Light Theme Colors*/
     --light-surface-container: #EDEDF4;
@@ -59,24 +53,21 @@ body[data-theme="light"] {
 body[data-theme="dark"] {
     background-color: var(--dark-surfaceContainerLow);
 }
-
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
 .containerFlex {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 5rem 1rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 720px;
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
-    justify-content: center;
-    align-items: center;*/
 }
 .containerGrid {
     padding-left: 16px;
