@@ -454,6 +454,7 @@ body[data-theme="dark"] {
 }
 .specialHeader {
     margin-top: 24px;
+    margin-bottom: 16px;
     color: var(--light-tertiary);
     text-align: center;
     font-size: 16px;
@@ -475,10 +476,26 @@ body[data-theme="dark"] {
     text-decoration: none;
     text-align: center;
     font-weight: 600;
-    width: 111px;
+    max-width: 150px;
     padding: 18px 24px;
     color: var(--light-on-primary);
     background-color: var(--light-primary);
+    border-radius: 28px;
+    box-shadow: var(--light-shadow-1);
+    border: none;
+}
+.secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    min-width: 111px;
+    padding: 16px 24px;
+    color: var(--light-onPrimaryContainer);
+    background-color: #FFFFFF;
+    border: 3px solid var(--light-primaryContainer);
     border-radius: 28px;
     box-shadow: var(--light-shadow-1);
 }
@@ -531,5 +548,53 @@ body[data-theme="dark"] {
 }
 /*About Section Ends*/
 /*Projects Section Starts*/
-
+.project-card {
+    background: var(--light-inverseSurface);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: var(--light-shadow-3);
+}
+.project-card .top {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.project-card .top .topFlex {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.project-card .top {
+    color: var(--light-inverseOnSurface);
+}
+.project-card .top .img-cp {
+    max-width: 40px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+.project-card .top .img-cp img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--light-primary);
+    box-shadow: var(--light-shadow-1);
+}
+.projectImg {
+    margin-bottom: 8px;
+}
+.project-card .bottom {
+    padding: 16px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.buttonsFlex {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+}
 /*Projects Section Ends*/
