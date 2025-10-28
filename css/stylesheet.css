@@ -84,21 +84,19 @@ body, h1, h2, h3, h4, h5, h6, p {
 }
 
 @media (min-width: 1024px) {
-    .container {
+    .containerFlex {
         padding-left: 96px;
         padding-right: 96px;
         max-width: 1024px;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 24px;
+        flex-direction: row;
     }
 }
 @media (min-width: 1280px) {
-    .container {
+    .containerFlex {
         padding-left: 96px;
         padding-right: 96px;
         max-width: 1280px;
-        grid-template-columns: repeat(12, 1fr);
-        column-gap: 24px;
+        flex-direction: row;
     }
 }
 /*End of Global Rules*/
@@ -593,8 +591,49 @@ body[data-theme="dark"] {
     flex-direction: column;
 }
 .buttonsFlex {
-    margin-top: 8px;
+    margin-top: 12px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 /*Projects Section Ends*/
+/*Contact Starts*/
+.Contact form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+}
+.Contact form input, textarea {
+    background-color: var(--light-primaryContainer);
+    outline: none;
+    border: none;
+    padding: 12px 12px 12px 16px;
+    box-shadow: var(--light-shadow-2);
+    border-radius: 8px;
+    width: 361px;
+    margin-bottom: 16px;
+    transition: all .3s;
+}
+.Contact form input::placeholder, textarea::placeholder {
+    color: var(--light-onPrimaryContainer);
+}
+.Contact form textarea {
+    border: 1px solid var(--light-on-box-color);
+    min-height: 207px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.Contact form button {
+    min-width: 151px;
+    margin-top: 16px;
+}
+.Contact form button i {
+    margin-right: 8px;
+    color: var(--light-on-primary);
+}
+.Contact form input:focus, textarea:focus {
+    box-shadow: var(--light-shadow-4);
+}
+/*Contact Ends*/

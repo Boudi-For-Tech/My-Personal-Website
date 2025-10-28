@@ -85,8 +85,8 @@
         <!--About End-->
         <!--Projects Start-->
     </div>
-    <div class="containerFlex">
-        <section id="Projects" class="projects">
+    <div class="containerFlex" id="Projects">
+        <section class="projects">
             <h2 class="specialDisplay">Projects</h2>
             <p class="specialHeader">Developer Teen Prodigy</p>
             <div class="project-card">
@@ -130,6 +130,22 @@
         </section>
     </div>
         <!--Projects End-->
+        <!--Posts Start-->
+    <div class="containerFlex" id="Contact">
+        <section class="Contact">
+            <h2 class="specialDisplay">Contact</h2>
+            <p class="specialHeader">Drop Me a Message</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!--Web3Form hidden input-->
+                <input type="hidden" name="access_key" value="cb32821d-eda3-45bd-a719-9ac3fb417557">
+                <input type="text" name="username" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Enter Your Message"></textarea>
+                <button type="submit" class="main"><i class="fa-solid fa-paper-plane"></i>Send</button>
+            </form>
+        </section>
+    </div>
+        <!--Posts End-->
     <!--Container End-->
     <script src="/js/script.js"></script>
 </body>
