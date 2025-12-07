@@ -1,152 +1,265 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boudi For Web</title>
-    <link rel="Icon" type="image/png" href="/Images/Big Boy.jpg">
-    <!--Main Template CSS File-->
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <!--Normalize CSS File-->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!--CDN Icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body data-theme="light">
-    <!--Nav Bar Start-->
-    <nav class="navBar">
-        <img src="/Images/Big Boy.jpg" alt="Boudi For Tech" style="width: 40px;">
-        <p>Boudi For Tech</p>
-        <div class="icons">
-            <i class="fa-solid fa-bars menu"></i>
-            <i class="fa-solid fa-moon mode"></i>
-        </div>
-    </nav>
-    <!--Nav Bar End-->
-    <!--Side Bar Start-->
-    <div class="sideBar showing">
-        <div class="header">
-            <img src="/Images/Big Boy.jpg" alt="Boudi For Tech" style="width: 48px;">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Boudi For Web</title>
+        <link rel="Icon" type="image/png" href="/Images/Big Boy.jpg" />
+        <!--Main Template CSS File-->
+        <link rel="stylesheet" href="css/stylesheet.css" />
+        <!--Normalize CSS File-->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <!--CDN Icons-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body data-theme="light">
+        <!--Nav Bar Start-->
+        <nav class="navBar">
+            <img
+                src="/Images/Big Boy.jpg"
+                alt="Boudi For Tech"
+                style="width: 40px"
+            />
             <p>Boudi For Tech</p>
+            <div class="icons">
+                <i class="fa-solid fa-bars menu"></i>
+                <i class="fa-solid fa-moon mode"></i>
+            </div>
+        </nav>
+        <!--Nav Bar End-->
+        <!--Side Bar Start-->
+        <div class="sideBar showing">
+            <div class="header">
+                <img
+                    src="/Images/Big Boy.jpg"
+                    alt="Boudi For Tech"
+                    style="width: 48px"
+                />
+                <p>Boudi For Tech</p>
+            </div>
+            <ul>
+                <li><a href="#About">About Me</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Posts">Posts</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="#About">About Me</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Posts">Posts</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
-    </div>
-    <!--Side Bar End-->
-    <!--Container Start-->
-    <div class="containerFlex">
-        <!--Hero Start-->
-        <section class="hero">
-            <img class="heroImg" src="/Images/Big Boy.jpg" alt="Boudi For Tech" width="320px">
-            <p class="heroGreetings"></p>
-            <p class="heroP">
-                I am a 16 years old web developer
-            that builds and creates websites with creativity!
-            </p>
-            <div class="heroButtons">
-                <a class="main" href="#About">About</a>
-                <a class="secondary" href="#Projects">Projects</a>
-            </div>
-        </section>
-        <!--Hero End-->
-    </div>
-    <div class="containerFlex" id="About">
-        <!--About Starts-->
-        <section class="About">
-            <h2 class="specialDisplay">About Me</h2>
-            <p class="specialHeader">Developer Teen Prodigy</p>
-            <h2 class="StartAbout">Get to know me!</h2>
-            <p>I am web developer,with a passion for crafting creative and functional digital experiences.</p>
-            <p>I shine the most in front-end development, where I bring ideas to life with clean code and thoughtful design.</p>
-            <p>I also enjoy designing with Figma and Canva, which helps me blend aesthetics with usability.</p>
-            <a href="#Projects" class="main">Projects</a>
-            <div class="skills">
-                <h2>My ToolKit</h2>
-                <div class="skillList">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>Tailwind</span>
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Git</span>
+        <!--Side Bar End-->
+        <!--Container Start-->
+        <div class="containerFlex">
+            <!--Hero Start-->
+            <section class="hero">
+                <img
+                    class="heroImg"
+                    src="/Images/Big Boy.jpg"
+                    alt="Boudi For Tech"
+                    width="320px"
+                />
+                <p class="heroGreetings"></p>
+                <p class="heroP">
+                    I am a 16 years old web developer that builds and creates
+                    websites with creativity!
+                </p>
+                <div class="heroButtons">
+                    <a class="main" href="#About">About</a>
+                    <a class="secondary" href="#Projects">Projects</a>
                 </div>
-            </div>
-        </section>
-        <!--About End-->
-        <!--Projects Start-->
-    </div>
-    <div class="containerFlex" id="Projects">
-        <section class="projects">
-            <h2 class="specialDisplay">Projects</h2>
-            <p class="specialHeader">Developer Teen Prodigy</p>
-            <div class="project-card">
-                <div class="top">
-                    <div class="img-cp">
-                        <img src="/Images/Chef Logo.png" alt="Chef Brand Logo" class="profile" >
-                    </div>
-                    <div class="topFlex">
-                        <h2 class="Title">Chef Ai Website</h2>
-                        <p class="descp">Using Ai to generate Delicious Recipes</p>
+            </section>
+            <!--Hero End-->
+        </div>
+        <div class="containerFlex" id="About">
+            <!--About Starts-->
+            <section class="About">
+                <h2 class="specialDisplay">About Me</h2>
+                <p class="specialHeader">Developer Teen Prodigy</p>
+                <h2 class="StartAbout">Get to know me!</h2>
+                <p>
+                    I am web developer,with a passion for crafting creative and
+                    functional digital experiences.
+                </p>
+                <p>
+                    I shine the most in front-end development, where I bring
+                    ideas to life with clean code and thoughtful design.
+                </p>
+                <p>
+                    I also enjoy designing with Figma and Canva, which helps me
+                    blend aesthetics with usability.
+                </p>
+                <a href="#Projects" class="main">Projects</a>
+                <div class="skills">
+                    <h2>My ToolKit</h2>
+                    <div class="skillList">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Tailwind</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Git</span>
                     </div>
                 </div>
-                <img src="/Images/Cooking Web.jpg" alt="Web Pic" class="projectImg" width="400px" height="194px">
-                <div class="bottom">
-                    <p class="descp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laudantium harum delectus?</p>
-                    <div class="buttonsFlex">
-                        <button class="main">Check it out</button>
-                        <button class="secondary">Learn More</button>
+            </section>
+            <!--About End-->
+            <!--Projects Start-->
+        </div>
+        <div class="containerFlex" id="Projects">
+            <section class="projects">
+                <h2 class="specialDisplay">Projects</h2>
+                <p class="specialHeader">Developer Teen Prodigy</p>
+                <div class="project-card">
+                    <div class="top">
+                        <div class="img-cp">
+                            <img
+                                src="/Images/Chef Logo.png"
+                                alt="Chef Brand Logo"
+                                class="profile"
+                            />
+                        </div>
+                        <div class="topFlex">
+                            <h2 class="Title">Chef Ai Website</h2>
+                            <p class="descp">
+                                Using Ai to generate Delicious Recipes
+                            </p>
+                        </div>
+                    </div>
+                    <img
+                        src="/Images/Cooking Web.jpg"
+                        alt="Web Pic"
+                        class="projectImg"
+                        width="400px"
+                        height="194px"
+                    />
+                    <div class="bottom">
+                        <p class="descp">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Vitae laudantium harum delectus?
+                        </p>
+                        <div class="buttonsFlex">
+                            <button class="main">Check it out</button>
+                            <button class="secondary">Learn More</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="top">
-                    <div class="img-cp">
-                        <img src="/Images/Blog web.jpg" alt="Blog web brand" class="profile">
+                <div class="project-card">
+                    <div class="top">
+                        <div class="img-cp">
+                            <img
+                                src="/Images/Blog web.jpg"
+                                alt="Blog web brand"
+                                class="profile"
+                            />
+                        </div>
+                        <div class="topFlex">
+                            <h2 class="Title">Boudi Blogs</h2>
+                            <p class="descp">
+                                A mini Social Media website just for the Boudi
+                                For Tech community
+                            </p>
+                        </div>
                     </div>
-                    <div class="topFlex">
-                        <h2 class="Title">Boudi Blogs</h2>
-                        <p class="descp">A mini Social Media website just for the Boudi For Tech community</p>
+                    <img
+                        src="/Images/Blog web.jpg"
+                        alt="Blog Pic"
+                        class="projectImg"
+                        width="400px"
+                        height="194px"
+                    />
+                    <div class="bottom">
+                        <p class="descp">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Dolorem dolor unde asperiores.
+                        </p>
+                        <div class="buttonsFlex">
+                            <button class="main">Check it out</button>
+                            <button class="secondary">Learn More</button>
+                        </div>
                     </div>
                 </div>
-                <img src="/Images/Blog web.jpg" alt="Blog Pic" class="projectImg" width="400px" height="194px">
-                <div class="bottom">
-                    <p class="descp">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolor unde asperiores.</p>
-                    <div class="buttonsFlex">
-                        <button class="main">Check it out</button>
-                        <button class="secondary">Learn More</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
         <!--Projects End-->
         <!--Posts Start-->
-    <div class="containerFlex" id="Contact">
-        <section class="Contact">
-            <h2 class="specialDisplay">Contact</h2>
-            <p class="specialHeader">Drop Me a Message</p>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <!--Web3Form hidden input-->
-                <input type="hidden" name="access_key" value="cb32821d-eda3-45bd-a719-9ac3fb417557">
-                <input type="text" name="username" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Enter Your Message"></textarea>
-                <button type="submit" class="main"><i class="fa-solid fa-paper-plane"></i>Send</button>
-            </form>
-        </section>
-    </div>
+        <div class="containerFlex" id="Contact">
+            <section class="Contact">
+                <h2 class="specialDisplay">Contact</h2>
+                <p class="specialHeader">Drop Me a Message</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!--Web3Form hidden input-->
+                    <input
+                        type="hidden"
+                        name="access_key"
+                        value="cb32821d-eda3-45bd-a719-9ac3fb417557"
+                    />
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Your Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        placeholder="Enter Your Message"
+                    ></textarea>
+                    <button type="submit" class="main">
+                        <i class="fa-solid fa-paper-plane"></i>Send
+                    </button>
+                </form>
+            </section>
+        </div>
         <!--Posts End-->
-    <!--Container End-->
-    <script src="/js/script.js"></script>
-</body>
+        <!--Footer Start-->
+        <div class="containerFlex" id="Contact">
+            <footer>
+                <section class="footerStart">
+                    <h2>Boudi For Tech</h2>
+                    <p>
+                        A 16 Years old web developer
+                        who enjoys building Creative and fast digital products.
+                    </p>
+                </section>
+                <section class="footerLinks">
+                    <ul>
+                        <li>
+                            <a href=""><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href=""
+                                ><i class="fa-brands fa-instagram"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="footerEnd">
+                    <h2>Design</h2>
+                    <p>
+                        Inspired by
+                        <a href="https://catalinonutu.com">Cata's Website</a>
+                    </p>
+                </section>
+            </footer>
+        </div>
+        <!--Footer End-->
+        <!--Container End-->
+        <script src="/js/script.js"></script>
+    </body>
 </html>
