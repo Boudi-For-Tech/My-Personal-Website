@@ -3,6 +3,7 @@ let changeMode = document.querySelector(".mode");
 let menuBar = document.querySelector(".menu");
 let sideBar = document.querySelector(".sideBar");
 let heroTXT = document.querySelector(".heroGreetings");
+let menuBarAnchors = document.querySelectorAll(".sideBar ul li");
 
 changeMode.addEventListener("click", () => {
   Body.dataset.theme = Body.dataset.theme === "light" ? "dark" : "light";
@@ -31,10 +32,19 @@ menuBar.addEventListener("click", () => {
       () => {
         sideBar.style.display = "none";
       },
-      { once: true }
+      { once: true },
     );
   }
 });
+
+menuBarAnchors.forEach((anchor) =>
+  anchor.addEventListener("click", () => {
+    sideBar.classList.remove("showing");
+    sideBar.style.display === "none";
+    sideBar.classList.add("hiding");
+  }),
+);
+
 const mainTXT = "Hi, I am Abdelrahaman";
 setTimeout(() => {
   for (let i = 0; i < mainTXT.length; i++) {
@@ -43,3 +53,4 @@ setTimeout(() => {
     }, i * 100);
   }
 }, 500);
+console.log("Hello World");
