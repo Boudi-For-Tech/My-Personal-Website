@@ -700,6 +700,26 @@ body[data-theme="dark"] {
     gap: 8px;
 }
 
+body[data-theme="dark"] {
+    .project-card {
+        background: var(--dark-inverseSurface);
+    }
+
+    .project-card .top,
+    .project-card .bottom {
+        color: var(--dark-inverseOnSurface)
+    }
+
+    .project-card .top .img-cp img {
+        border-color: var(--dark-primary)
+    }
+
+    .project-card .bottom .secondary {
+        background: var(--dark-primaryContainer);
+        color: var(--dark-onPrimaryContainer);
+    }
+}
+
 /*Projects Section Ends*/
 /*Contact Starts*/
 .Contact form {
@@ -741,7 +761,13 @@ textarea::placeholder {
 
 .Contact form button i {
     margin-right: 8px;
-    color: var(--light-on-primary);
+    color: var(--light-onPrimary);
+}
+
+body[theme="dark"] {
+    .Contact form button i {
+        color: var(--dark-onPrimaryContainer);
+    }
 }
 
 .Contact form input:focus,
