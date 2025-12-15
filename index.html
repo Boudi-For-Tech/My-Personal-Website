@@ -21,245 +21,320 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+        <!--AOS CDN-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body data-theme="light">
-        <!--Nav Bar Start-->
-        <nav class="navBar">
-            <img
-                src="/Images/Big Boy.jpg"
-                alt="Boudi For Tech"
-                style="width: 40px"
-            />
-            <p>Boudi For Tech</p>
-            <div class="icons">
-                <i class="fa-solid fa-bars menu"></i>
-                <i class="fa-solid fa-moon mode"></i>
-            </div>
-        </nav>
-        <!--Nav Bar End-->
-        <!--Side Bar Start-->
-        <div class="sideBar showing">
-            <div class="header">
+        <main>
+            <!--Nav Bar Start-->
+            <nav class="navBar">
                 <img
                     src="/Images/Big Boy.jpg"
                     alt="Boudi For Tech"
-                    style="width: 48px"
+                    style="width: 40px"
                 />
-                <p>Boudi For Tech</p>
+                <a href="#Hero">Boudi For Tech</a>
+                <div class="navLinks">
+                    <a href="#About">About</a>
+                    <a href="#Projects">Projects</a>
+                    <a href="#Contact">Contact</a>
+                </div>
+                <div class="icons">
+                    <i class="fa-solid fa-moon mode"></i>
+                </div>
+            </nav>
+            <!--Nav Bar End-->
+            <div class="app">
+                <!--Container Start-->
+                <div class="hero" id="Hero">
+                    <!--Hero Start-->
+                    <section class="hero-1">
+                        <img
+                            data-aos="fade-up"
+                            data-aos-duration="1500"
+                            class="heroImg"
+                            src="/Images/Big Boy.jpg"
+                            alt="Boudi For Tech"
+                            width="320px"
+                        />
+                        <p class="heroGreetings"></p>
+                        <p class="heroP">
+                            I am a 16 years old web developer that builds and creates
+                            websites with creativity!
+                        </p>
+                        <div class="heroButtons">
+                            <a class="main" href="#About">About</a>
+                            <a class="secondary" href="#Projects">Projects</a>
+                        </div>
+                    </section>
+                    <!--Hero End-->
+                </div>
+                <div class="container" id="About" class="observe">
+                    <!--About Starts-->                
+                    <h2 class="specialDisplay" data-aos="fade-down" data-aos-duration="1500">About</h2>
+                    <p class="specialHeader"  data-aos="fade-down" data-aos-duration="1600">Developer Teen Prodigy</p>
+                    <section class="About containerGrid">
+                        <div class="AboutContext">
+                            <h2 class="StartAbout" data-aos="fade-right">Get to know me!</h2>
+                            <p data-aos="fade-up" data-aos-duration="1100">
+                                I am web developer,with a passion for crafting creative and
+                                functional digital experiences.
+                            </p>
+                            <p data-aos="fade-up" data-aos-duration="1200">
+                                I shine the most in front-end development, where I bring
+                                ideas to life with clean code and thoughtful design.
+                            </p>
+                            <p data-aos="fade-up" data-aos-duration="1300">
+                                I also enjoy designing with Figma and Canva, which helps me
+                                blend aesthetics with usability.
+                            </p>
+                            <a href="#Projects" class="main" data-aos="fade-right" data-aos-duration="900">Projects</a>
+                        </div>
+                        <div class="skills">
+                            <h2 data-aos="fade-right" data-aos-duration="900">My ToolKit</h2>
+                            <div class="skillList">
+                                <span data-aos="fade-up" data-aos-duration="1000">HTML</span>
+                                <span data-aos="fade-up" data-aos-duration="1100">CSS</span>
+                                <span data-aos="fade-up" data-aos-duration="1200">JavaScript</span>
+                                <span data-aos="fade-up" data-aos-duration="1300">TypeScript</span>
+                                <span data-aos="fade-up" data-aos-duration="1400">Figma</span>
+                                <span data-aos="fade-up" data-aos-duration="1500">React</span>
+                                <span data-aos="fade-up" data-aos-duration="1600">Tailwind</span>
+                                <span data-aos="fade-up" data-aos-duration="1700">Python</span>
+                                <span data-aos="fade-up" data-aos-duration="1800">Flask</span>
+                                <span data-aos="fade-up" data-aos-duration="1900">Git</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!--About End-->
+                    <!--Projects Start-->
+                </div>
+                <div class="container" id="Projects" class="observe">
+                    <h2 class="specialDisplay" data-aos="fade-down" data-aos-duration="1500">Projects</h2>
+                    <p class="specialHeader" data-aos="fade-down" data-aos-duration="1600">Builds with Creativity !</p>
+                    <section class="containerGrid">
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="top">
+                                <div class="img-cp">
+                                    <img
+                                        src="/Images/Chef Logo.png"
+                                        alt="Chef Brand Logo"
+                                        class="profile"
+                                    />
+                                </div>
+                                <div class="topFlex">
+                                    <h2 class="Title">Chef Ai Website</h2>
+                                    <p class="descp">
+                                        Using Ai to generate Delicious Recipes
+                                    </p>
+                                </div>
+                            </div>
+                            <img
+                                src="/Images/Cooking Web.jpg"
+                                alt="Web Pic"
+                                class="projectImg"
+                                width="375px"
+                                height="194px"
+                            />
+                            <div class="bottom">
+                                <p class="descp">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Vitae laudantium harum delectus?
+                                </p>
+                                <div class="buttonsFlex">
+                                    <a class="main" href="">Check it out</a>
+                                    <a class="secondary" href="">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="top">
+                                <div class="img-cp">
+                                    <img
+                                        src="/Images/letter-w.png"
+                                        alt="Blog web brand"
+                                        class="profile"
+                                    />
+                                </div>
+                                <div class="topFlex">
+                                    <h2 class="Title">Assembly endgame</h2>
+                                    <p class="descp">
+                                        Is a game about guessing the word before killing all languages
+                                    </p>
+                                </div>
+                            </div>
+                            <img
+                                src="/Images/Assmenbly endgame Wallpaper.png"
+                                alt="Assembly Web Pic"
+                                class="projectImg"
+                                width="375px"
+                                height="194px"
+                            />
+                            <div class="bottom">
+                                <p class="descp">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit. Dolorem dolor unde asperiores.
+                                </p>
+                                <div class="buttonsFlex">
+                                    <a class="main" href="">Check it out</a>
+                                    <a class="secondary" href="">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="top">
+                                <div class="img-cp">
+                                    <img
+                                        src="/Images/Coming Soon.png"
+                                        alt="Coming Soon Pic"
+                                        class="profile"
+                                    />
+                                </div>
+                                <div class="topFlex">
+                                    <h2 class="Title">Coming Soon...</h2>
+                                    <p class="descp">
+                                        Coming Soon...
+                                    </p>
+                                </div>
+                            </div>
+                            <img
+                                src="/Images/Image Project Example.png"
+                                alt="Coming Soon..."
+                                class="projectImg"
+                                width="375px"
+                                height="194px"
+                            />
+                            <div class="bottom">
+                                <p class="descp">
+                                    The upcoming Project will be about a really amazing Quiz App! Stay Tuned!
+                                </p>
+                                <div class="buttonsFlex">
+                                    <button class="main" >Check it out</button>
+                                    <button class="secondary">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="top">
+                                <div class="img-cp">
+                                    <img
+                                        src="/Images/Coming Soon.png"
+                                        alt="Coming Soon Pic"
+                                        class="profile"
+                                    />
+                                </div>
+                                <div class="topFlex">
+                                    <h2 class="Title">Coming Soon...</h2>
+                                    <p class="descp">
+                                        Coming Soon...
+                                    </p>
+                                </div>
+                            </div>
+                            <img
+                                src="/Images/Image Project Example.png"
+                                alt="Coming Soon..."
+                                class="projectImg"
+                                width="375px"
+                                height="194px"
+                            />
+                            <div class="bottom">
+                                <p class="descp">
+                                    The upcoming Project will be about a really amazing Quiz App! Stay Tuned!
+                                </p>
+                                <div class="buttonsFlex">
+                                    <a class="main" href="">Check it out</a>
+                                    <a class="secondary" href="">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--Projects End-->
+                <!--Posts Start-->
+                <div class="container" id="Contact" class="observe">
+                    <section class="Contact">
+                        <h2 class="specialDisplay" data-aos="fade-down" data-aos-duration="1500">Contact</h2>
+                        <p class="specialHeader" data-aos="fade-down" data-aos-duration="1600">Drop Me a Message</p>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <!--Web3Form hidden input-->
+                            <input
+                                type="hidden"
+                                name="access_key"
+                                value="cb32821d-eda3-45bd-a719-9ac3fb417557"
+                            />
+                            <input
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                type="text"
+                                name="username"
+                                placeholder="Your Name"
+                                required
+                            />
+                            <input
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                required
+                            />
+                            <textarea
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                name="message"
+                                placeholder="Enter Your Message..."
+                            ></textarea>
+                            <button type="submit" class="main">
+                                <i class="fa-solid fa-paper-plane"></i>Send
+                            </button>
+                        </form>
+                    </section>
+                </div>
+                <!--Posts End-->
+                <!--Footer Start-->
+                <div>
+                    <footer>
+                        <section class="footerStart">
+                            <h1>Boudi For Tech</h1>
+                            <p>
+                                A 16 Years old web developer
+                                who enjoys building Creative and fast digital products.
+                            </p>
+                        </section>
+                        <section class="footerLinks">
+                            <h1>Social</h1>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/boudi425"><i class="fa-brands fa-github"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/abdelrahaman-hassan-barakat-285357376/"><i class="fa-brands fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/boudi_for_tech/"
+                                        ><i class="fa-brands fa-instagram"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="footerEnd">
+                            <h1>Design</h1>
+                            <p>
+                                Inspired by
+                                <a href="https://catalinonutu.com">Cata's Website</a>
+                            </p>
+                        </section>
+                    </footer>
+                </div>
+                <!--Footer End-->
+                <!--Container End-->
             </div>
-            <ul>
-                <li><a href="#About">About Me</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-        </div>
-        <!--Side Bar End-->
-        <!--Container Start-->
-        <div class="containerFlex">
-            <!--Hero Start-->
-            <section class="hero">
-                <img
-                    class="heroImg"
-                    src="/Images/Big Boy.jpg"
-                    alt="Boudi For Tech"
-                    width="320px"
-                />
-                <p class="heroGreetings"></p>
-                <p class="heroP">
-                    I am a 16 years old web developer that builds and creates
-                    websites with creativity!
-                </p>
-                <div class="heroButtons">
-                    <a class="main" href="#About">About</a>
-                    <a class="secondary" href="#Projects">Projects</a>
-                </div>
-            </section>
-            <!--Hero End-->
-        </div>
-        <div class="containerFlex" id="About">
-            <!--About Starts-->
-            <section class="About">
-                <h2 class="specialDisplay">About Me</h2>
-                <p class="specialHeader">Developer Teen Prodigy</p>
-                <h2 class="StartAbout">Get to know me!</h2>
-                <p>
-                    I am web developer,with a passion for crafting creative and
-                    functional digital experiences.
-                </p>
-                <p>
-                    I shine the most in front-end development, where I bring
-                    ideas to life with clean code and thoughtful design.
-                </p>
-                <p>
-                    I also enjoy designing with Figma and Canva, which helps me
-                    blend aesthetics with usability.
-                </p>
-                <a href="#Projects" class="main">Projects</a>
-                <div class="skills">
-                    <h2>My ToolKit</h2>
-                    <div class="skillList">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>React</span>
-                        <span>Tailwind</span>
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>Git</span>
-                    </div>
-                </div>
-            </section>
-            <!--About End-->
-            <!--Projects Start-->
-        </div>
-        <div class="containerFlex" id="Projects">
-            <section class="projects">
-                <h2 class="specialDisplay">Projects</h2>
-                <p class="specialHeader">Developer Teen Prodigy</p>
-                <div class="project-card">
-                    <div class="top">
-                        <div class="img-cp">
-                            <img
-                                src="/Images/Chef Logo.png"
-                                alt="Chef Brand Logo"
-                                class="profile"
-                            />
-                        </div>
-                        <div class="topFlex">
-                            <h2 class="Title">Chef Ai Website</h2>
-                            <p class="descp">
-                                Using Ai to generate Delicious Recipes
-                            </p>
-                        </div>
-                    </div>
-                    <img
-                        src="/Images/Cooking Web.jpg"
-                        alt="Web Pic"
-                        class="projectImg"
-                        width="400px"
-                        height="194px"
-                    />
-                    <div class="bottom">
-                        <p class="descp">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Vitae laudantium harum delectus?
-                        </p>
-                        <div class="buttonsFlex">
-                            <button class="main">Check it out</button>
-                            <button class="secondary">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="top">
-                        <div class="img-cp">
-                            <img
-                                src="/Images/Blog web.jpg"
-                                alt="Blog web brand"
-                                class="profile"
-                            />
-                        </div>
-                        <div class="topFlex">
-                            <h2 class="Title">Boudi Blogs</h2>
-                            <p class="descp">
-                                A mini Social Media website just for the Boudi
-                                For Tech community
-                            </p>
-                        </div>
-                    </div>
-                    <img
-                        src="/Images/Blog web.jpg"
-                        alt="Blog Pic"
-                        class="projectImg"
-                        width="400px"
-                        height="194px"
-                    />
-                    <div class="bottom">
-                        <p class="descp">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Dolorem dolor unde asperiores.
-                        </p>
-                        <div class="buttonsFlex">
-                            <button class="main">Check it out</button>
-                            <button class="secondary">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!--Projects End-->
-        <!--Posts Start-->
-        <div class="containerFlex" id="Contact">
-            <section class="Contact">
-                <h2 class="specialDisplay">Contact</h2>
-                <p class="specialHeader">Drop Me a Message</p>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <!--Web3Form hidden input-->
-                    <input
-                        type="hidden"
-                        name="access_key"
-                        value="cb32821d-eda3-45bd-a719-9ac3fb417557"
-                    />
-                    <input
-                        type="text"
-                        name="username"
-                        placeholder="Your Name"
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        required
-                    />
-                    <textarea
-                        name="message"
-                        placeholder="Enter Your Message..."
-                    ></textarea>
-                    <button type="submit" class="main">
-                        <i class="fa-solid fa-paper-plane"></i>Send
-                    </button>
-                </form>
-            </section>
-        </div>
-        <!--Posts End-->
-        <!--Footer Start-->
-        <div class="containerFlex" id="Contact">
-            <footer>
-                <section class="footerStart">
-                    <h1>Boudi For Tech</h1>
-                    <p>
-                        A 16 Years old web developer
-                        who enjoys building Creative and fast digital products.
-                    </p>
-                </section>
-                <section class="footerLinks">
-                    <h1>Social</h1>
-                    <ul>
-                        <li>
-                            <a href=""><i class="fa-brands fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href=""
-                                ><i class="fa-brands fa-instagram"></i
-                            ></a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="footerEnd">
-                    <h1>Design</h1>
-                    <p>
-                        Inspired by
-                        <a href="https://catalinonutu.com">Cata's Website</a>
-                    </p>
-                </section>
-            </footer>
-        </div>
-        <!--Footer End-->
-        <!--Container End-->
+            <!--Container Start-->
+        </main>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -1,49 +1,24 @@
 let Body = document.querySelector("body");
 let changeMode = document.querySelector(".mode");
-let menuBar = document.querySelector(".menu");
-let sideBar = document.querySelector(".sideBar");
 let heroTXT = document.querySelector(".heroGreetings");
-let menuBarAnchors = document.querySelectorAll(".sideBar ul li");
-
+const Form = document.querySelector(".Contact form");
+const sections = document.querySelectorAll(".observe");
+Body.dataset.theme = localStorage.getItem("Mode");
+Form.addEventListener("submit", (e) => {
+  Form.reset();
+});
 changeMode.addEventListener("click", () => {
   Body.dataset.theme = Body.dataset.theme === "light" ? "dark" : "light";
   if (changeMode.classList.contains("fa-moon")) {
     changeMode.classList.remove("fa-moon");
+    localStorage.setItem("Mode", "dark");
     changeMode.classList.add("fa-sun");
   } else {
     changeMode.classList.remove("fa-sun");
+    localStorage.setItem("Mode", "light");
     changeMode.classList.add("fa-moon");
   }
 });
-
-menuBar.addEventListener("click", () => {
-  if (
-    sideBar.classList.contains("hiding") ||
-    sideBar.style.display === "none"
-  ) {
-    sideBar.style.display = "flex";
-    sideBar.classList.remove("hiding");
-    sideBar.classList.add("showing");
-  } else {
-    sideBar.classList.remove("showing");
-    sideBar.classList.add("hiding");
-    sideBar.addEventListener(
-      "animationend",
-      () => {
-        sideBar.style.display = "none";
-      },
-      { once: true },
-    );
-  }
-});
-
-menuBarAnchors.forEach((anchor) =>
-  anchor.addEventListener("click", () => {
-    sideBar.classList.remove("showing");
-    sideBar.style.display === "none";
-    sideBar.classList.add("hiding");
-  }),
-);
 
 const mainTXT = "Hi, I am Abdelrahaman";
 setTimeout(() => {
@@ -54,3 +29,20 @@ setTimeout(() => {
   }
 }, 500);
 console.log("Hello World");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  },
+  {
+    threshold: 0.3, // 30% visible
+  }
+);
+
+sections.forEach((section) => observer.observe(section));

@@ -46,7 +46,7 @@ body {
     font-family: "Montserrat", sans-serif;
     transition: all .3s;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-wrap: break-word;
 }
 
 body[data-theme="light"] {
@@ -69,7 +69,7 @@ p {
     padding: 0;
 }
 
-.containerFlex {
+/*.container {
     padding: 5rem 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -80,49 +80,42 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+}*/
 
-.containerGrid {
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 720px;
-    width: 100%;
+.container {
+    padding: 6rem 2rem;
+    position: relative;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-@media (min-width: 1024px) {
-    .containerFlex {
-        padding-left: 96px;
-        padding-right: 96px;
-        max-width: 1024px;
-        flex-direction: row;
-    }
+.containerGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    margin-top: 16px;
 }
-
-@media (min-width: 1280px) {
-    .containerFlex {
-        padding-left: 96px;
-        padding-right: 96px;
-        max-width: 1280px;
-        flex-direction: row;
+@media (max-width: 720px) {
+    .containerGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    
 }
-
 /*End of Global Rules*/
 /*NabBar Starts*/
 .navBar {
     position: sticky;
     top: 0;
     z-index: 2;
-    padding: 16px;
+    padding: 0 48px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     background-color: var(--light-surface-container);
     box-shadow: var(--light-shadow-1);
     font-weight: bold;
@@ -130,12 +123,54 @@ p {
     border-bottom-left-radius: 8px;
     transition: all .3s;
 }
+.navBar .navLinks {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-right: 24px;
+}
+.navBar .navLinks a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--light-inverseSurface);
+    transition: all .3s;
+    padding: 1.25rem 0;
+}
+body[data-theme="dark"] .navBar .navLinks a {
+    color: var(--dark-inverseSurface)
+}
+body[data-theme="dark"] .navBar .navLinks a:hover {
+    color: var(--dark-primary);
+    text-shadow: 0 0 15px var(--dark-primary);
+    outline: none;
+}
+.navBar .navLinks a:hover {
+    color: var(--light-primary);
+    text-shadow: 0 0 15px var(--light-primary);
+    outline: none;
+}
+.navBar .navLinks a:active {
+    color: var(--light-primary);
+    text-shadow: 0 0 15px var(--light-primary);
+    outline: none;
+}
+body[data-theme="dark"] .navBar .navLinks a:active {
+    color: var(--dark-primary);
+    text-shadow: 0 0 15px var(--dark-primary);
+    outline: none;
+}
+@media (min-width: 1024px) {
+    .navBar .navLinks a {
+        font-size: 24px;
+    }
+}
 
 body[data-theme="dark"] .navBar {
     background-color: var(--dark-surfaceVariant);
 }
 
-body[data-theme="dark"] .navBar p {
+body[data-theme="dark"] .navBar a {
     color: var(--dark-onSurfaceVariant)
 }
 
@@ -148,7 +183,6 @@ body[data-theme="dark"] .navBar img {
 }
 
 .navBar img {
-    margin-right: 8px;
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -157,29 +191,32 @@ body[data-theme="dark"] .navBar img {
     box-shadow: var(--light-shadow-1);
 }
 
-.navBar p {
+.navBar a {
     margin: 0;
     margin-right: auto;
     font-size: 24px;
+    text-decoration: none;
+    color: var(---light-onSurfaceVariant);
 }
-
-.navBar .icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navBar a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 15px var(--light-primary);
+    color: var(--light-primary);
 }
-
+@media (max-width: 720px) {
+    .navBar {
+        padding: 12px 24px;
+    }
+    .navBar > a {
+        display: none;
+    }
+}
 .navBar .icons i {
     font-size: 24px;
-    margin-left: 8px;
+
     color: var(--light-primary);
     cursor: pointer;
 }
-
-.menu {
-    margin-right: 8px;
-}
-
 .mode {
     border: 2px solid var(--light-primary);
     border-radius: 50%;
@@ -310,7 +347,20 @@ body[data-theme="dark"] a {
 
 /*NabBar End*/
 /*Hero Section Starts*/
+.hero-1 {
+    padding: 0 2rem;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .hero {
+    padding: 0 2rem;
+    padding-top: 1.5rem;
+    position: relative;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,12 +375,12 @@ body[data-theme="dark"] a {
     box-shadow: var(--light-shadow-5);
     margin-bottom: 36px;
 }
-
 .heroGreetings {
     margin: 0;
     margin-top: 16px;
     margin-bottom: 8px;
-    font-size: 32px;
+    text-align: center;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--light-primary);
     text-shadow: 0 0 25px var(--light-primary);
@@ -452,6 +502,7 @@ body[data-theme="dark"] a {
     background-color: var(--light-primary);
     border-radius: 28px;
     box-shadow: var(--light-shadow-1);
+    cursor: pointer;
 }
 
 .heroButtons .secondary {
@@ -468,6 +519,7 @@ body[data-theme="dark"] a {
     border: 3px solid var(--light-primaryContainer);
     border-radius: 28px;
     box-shadow: var(--light-shadow-1);
+    cursor: pointer;
 }
 
 .heroButtons a:hover {
@@ -515,36 +567,42 @@ body[data-theme="dark"] {
     line-height: 44px;
     text-align: center;
     text-shadow: 0 0 25px var(--light-primary);
+    position: relative;
 }
 
-.specialDisplay::after {
-    content: "";
-    position: absolute;
-    width: 65px;
-    height: 5px;
-    border-radius: 8px;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: var(--light-primary);
-    bottom: -298px;
-}
 
 .specialHeader {
-    margin-top: 24px;
     margin-bottom: 16px;
     color: var(--light-tertiary);
-    text-align: center;
     font-size: 16px;
     line-height: 24px;
+    text-align: center;
 }
-
+.specialDisplay::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 50px;
+  height: 4px;
+  background: var(--light-primary);
+  border-radius: 999px;
+}
+body[data-theme="dark"] .specialDisplay::after {
+    background: var(--dark-primary);
+}
+.AboutContext {
+    max-width: 520px;
+}
 .StartAbout {
     margin-top: 36px;
     margin-bottom: 16px;
-    font-size: 36px;
     line-height: 44px;
 }
-
+.StartAbout h2 {
+    font-size: 24px;
+}
 .About p {
     margin-bottom: 16px;
 }
@@ -563,6 +621,7 @@ body[data-theme="dark"] {
     border-radius: 28px;
     box-shadow: var(--light-shadow-1);
     border: none;
+    cursor: pointer;
 }
 
 .secondary {
@@ -579,9 +638,12 @@ body[data-theme="dark"] {
     border: 3px solid var(--light-primaryContainer);
     border-radius: 28px;
     box-shadow: var(--light-shadow-1);
+    cursor: pointer;
 }
 
 .skills {
+    max-width: 420px;
+    margin-top: 32px;
     display: flex;
     flex: 1;
     gap: 1rem;
@@ -589,9 +651,8 @@ body[data-theme="dark"] {
 }
 
 .skills h2 {
-    margin-top: 16px;
     margin-bottom: 16px;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 44px;
 }
 
@@ -647,13 +708,13 @@ body[data-theme="dark"] {
     margin-bottom: 16px;
     border-radius: 8px;
     box-shadow: var(--light-shadow-3);
+    max-width: 375px;
 }
 
 .project-card .top {
     display: flex;
     align-items: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
 }
 
 .project-card .top .topFlex {
@@ -757,8 +818,12 @@ textarea::placeholder {
 .Contact form button {
     min-width: 151px;
     margin-top: 16px;
+    cursor: pointer;
+    transition: all .3s;
 }
-
+.Contact form button:hover {
+    box-shadow: var(--light-shadow-3);
+}
 .Contact form button i {
     margin-right: 8px;
     color: var(--light-onPrimary);
@@ -774,16 +839,28 @@ body[theme="dark"] {
 textarea:focus {
     box-shadow: var(--light-shadow-4);
 }
-
+@media (min-width: 1024px) {
+    .Contact form input, textarea {
+        width: 750px;
+    }
+}
 /*Contact Ends*/
 /*Footer Starts*/
 footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border-top: 1px solid #F9F9F9;
+    border-top: 1px solid var(--light-onSurfaceVariant);
     padding: 16px 8px;
 }
-
+@media (min-width: 1024px) {
+    footer {
+        padding: 16px 36px;
+    }
+}
+section.footerStart h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
 section.footerStart,
 section.footerLinks {
     display: flex;
@@ -801,8 +878,14 @@ section.footerLinks ul {
 section.footerLinks ul li a i {
     color: #000;
     font-size: 36px;
+    transition: all .3s ease;
 }
-
+section.footerLinks ul li a i:hover {
+    transform: scale(1.1);
+}
+section.footerLinks ul li a i:active {
+    transform: scale(.98);
+}
 section.footerLinks h1 {
     text-align: right;
 }
@@ -817,5 +900,21 @@ section.footerEnd p {
 section.footerEnd a {
     text-decoration: none;
 }
+body[data-theme="dark"] {
+    footer {
+        border-top: 1px solid var(--dark-onSurfaceVariant);
+    }
 
+    section.footerStart h1,
+    section.footerStart p,
+    section.footerEnd h1,
+    section.footerEnd p,
+    section.footerLinks h1 {
+        color: var(--dark-onSurfaceVariant);
+    }
+
+    section.footerLinks ul li a i {
+        color: var(--dark-onSurfaceVariant);
+    }
+}
 /*Footer End*/
