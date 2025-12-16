@@ -36,7 +36,7 @@
     --light-shadow-5: 0px 8px 12px 6px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -46,7 +46,7 @@ body {
     font-family: "Montserrat", sans-serif;
     transition: all .3s;
     scroll-behavior: smooth;
-    overflow-wrap: break-word;
+    overflow-x: hidden;
 }
 
 body[data-theme="light"] {
@@ -94,7 +94,7 @@ p {
 .containerGrid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
+    gap: 32px;
     margin-top: 16px;
 }
 @media (max-width: 720px) {
@@ -102,8 +102,8 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 0;
     }
-    
 }
 /*End of Global Rules*/
 /*NabBar Starts*/
@@ -127,7 +127,10 @@ p {
     display: flex;
     gap: 16px;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 8px;
+}
+nav > a {
+    transition: all .3s ease;
 }
 .navBar .navLinks a {
     position: relative;
@@ -205,7 +208,10 @@ body[data-theme="dark"] .navBar img {
 }
 @media (max-width: 720px) {
     .navBar {
-        padding: 0 24px;
+        padding: 0 1rem;
+    }
+    .navBar .navLinks {
+        margin-right: 0;
     }
     .navBar > a {
         display: none;
@@ -232,21 +238,6 @@ body[data-theme="dark"] .navBar img {
     padding: 5px 8px;
 }
 
-.sideBar {
-    position: fixed;
-    margin-top: -60px;
-    display: none;
-    flex-direction: column;
-    z-index: 5;
-    background-color: var(--light-surface-container);
-    width: 50%;
-    height: 100vh;
-    box-shadow: var(--light-shadow-2);
-    transition: all .3s;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding: 16px;
-}
 
 .showing {
     opacity: 1;
@@ -288,69 +279,9 @@ body[data-theme="dark"] .navBar img {
     }
 }
 
-.sideBar img {
-    margin-right: 8px;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--light-primary);
-    box-shadow: var(--light-shadow-1);
-}
-
-.header {
-    display: flex;
-    margin-bottom: 8px;
-}
-
-.header p {
-    font-weight: bold;
-}
-
-.sideBar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sideBar ul li {
-    margin-top: 24px;
-}
-
-.sideBar a {
-    text-decoration: none;
-    font-size: 24px;
-    color: var(--light-primary);
-    transition: all .3s;
-    font-weight: bold;
-}
-
-.sideBar a:hover {
-    padding: 12px;
-}
-
-body[data-theme="dark"] .sideBar {
-    background-color: var(--dark-surfaceVariant);
-}
-
-body[data-theme="dark"] .sideBar img {
-    border-color: var(--dark-primary);
-}
-
-body[data-theme="dark"] .sideBar .header p {
-    color: var(--dark-onSurfaceVariant)
-}
-
-body[data-theme="dark"] a {
-    color: var(--dark-primary);
-}
-
 /*NabBar End*/
 /*Hero Section Starts*/
 .hero-1 {
-    padding: 0 2rem;
-    position: relative;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,8 +297,8 @@ body[data-theme="dark"] a {
     align-items: center;
     flex-direction: column;
 }
-
 .heroImg {
+    max-width: 320px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
@@ -389,7 +320,7 @@ body[data-theme="dark"] a {
 .heroGreetings::after {
     content: "|";
     z-index: 2;
-    width: 24px;
+    max-width: 24px;
     height: 36px;
     animation-name: blink;
     animation-duration: .5s;
@@ -810,7 +741,8 @@ textarea {
     padding: 12px 12px 12px 16px;
     box-shadow: var(--light-shadow-2);
     border-radius: 8px;
-    width: 361px;
+    min-width: 300px;
+    width: 100%;
     margin-bottom: 16px;
     transition: all .3s;
 }
@@ -853,24 +785,30 @@ textarea:focus {
 }
 @media (min-width: 1024px) {
     .Contact form input, textarea {
-        width: 750px;
+        min-width: 750px;
     }
 }
 /*Contact Ends*/
 /*Footer Starts*/
 footer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
     border-top: 1px solid var(--light-onSurfaceVariant);
-    padding: 16px 8px;
+    padding: .5rem 1rem;
+    max-width: 900px;
 }
-@media (min-width: 1024px) {
+.Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px) {
     footer {
-        padding: 16px 36px;
+        flex-wrap: wrap;
     }
 }
 section.footerStart h1 {
-    font-size: 30px;
     margin-bottom: 8px;
 }
 section.footerStart,
@@ -878,7 +816,9 @@ section.footerLinks {
     display: flex;
     flex-direction: column;
 }
-
+section.footerStart h1, section.footerLinks h1, section.footerEnd h1 {
+    font-size: 24px;
+}
 section.footerLinks ul {
     list-style: none;
     display: flex;
@@ -889,7 +829,7 @@ section.footerLinks ul {
 
 section.footerLinks ul li a i {
     color: #000;
-    font-size: 36px;
+    font-size: 24px;
     transition: all .3s ease;
 }
 section.footerLinks ul li a i:hover {
@@ -929,4 +869,5 @@ body[data-theme="dark"] {
         color: var(--dark-onSurfaceVariant);
     }
 }
+
 /*Footer End*/
