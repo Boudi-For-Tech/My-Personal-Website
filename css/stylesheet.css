@@ -83,7 +83,7 @@ p {
 }*/
 
 .container {
-    padding: 6rem 2rem;
+    padding: 5rem 1.5rem;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -111,7 +111,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 2;
-    padding: 0 48px;
+    padding: 0 36px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -205,7 +205,7 @@ body[data-theme="dark"] .navBar img {
 }
 @media (max-width: 720px) {
     .navBar {
-        padding: 12px 24px;
+        padding: 0 24px;
     }
     .navBar > a {
         display: none;
@@ -709,6 +709,18 @@ body[data-theme="dark"] {
     border-radius: 8px;
     box-shadow: var(--light-shadow-3);
     max-width: 375px;
+}
+.project-card img.projectImg {
+    max-width: 375px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .project-card {
+        max-width: 320px;
+    }
+    .project-card img.projectImg {
+        max-width: 320px;
+    }
 }
 
 .project-card .top {
