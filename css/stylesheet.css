@@ -42,10 +42,13 @@
     -moz-box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Montserrat", sans-serif;
     transition: all .3s;
-    scroll-behavior: smooth;
+    
     overflow-x: hidden;
 }
 
@@ -115,7 +118,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 8px;
     background-color: var(--light-surface-container);
     box-shadow: var(--light-shadow-1);
     font-weight: bold;
@@ -125,7 +128,7 @@ p {
 }
 .navBar .navLinks {
     display: flex;
-    gap: 16px;
+    gap: 8px;
     align-items: center;
     margin-right: 8px;
 }
@@ -217,13 +220,10 @@ body[data-theme="dark"] .navBar img {
         display: none;
     }
 }
-.navBar .icons i {
-    font-size: 24px;
-
+.mode {
     color: var(--light-primary);
     cursor: pointer;
-}
-.mode {
+    font-size: 24px;
     border: 2px solid var(--light-primary);
     border-radius: 50%;
     box-shadow: var(--light-shadow-1);
@@ -783,7 +783,7 @@ body[theme="dark"] {
 textarea:focus {
     box-shadow: var(--light-shadow-4);
 }
-@media (min-width: 1024px) {
+@media (min-width: 850px) {
     .Contact form input, textarea {
         min-width: 750px;
     }
@@ -811,7 +811,10 @@ footer {
 section.footerStart h1 {
     margin-bottom: 8px;
 }
-section.footerStart,
+section.footerStart {
+    display: flex;
+    flex-direction: column;
+}
 section.footerLinks {
     display: flex;
     flex-direction: column;
@@ -819,29 +822,22 @@ section.footerLinks {
 section.footerStart h1, section.footerLinks h1, section.footerEnd h1 {
     font-size: 24px;
 }
-section.footerLinks ul {
-    list-style: none;
+.socialLinksItems {
     display: flex;
-    column-gap: 16px;
-    margin-top: 6px;
-    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 8px;
 }
-
-section.footerLinks ul li a i {
+section.footerLinks a i {
     color: #000;
-    font-size: 24px;
+    font-size: 30px;
     transition: all .3s ease;
 }
-section.footerLinks ul li a i:hover {
+section.footerLinks a i:hover {
     transform: scale(1.1);
 }
-section.footerLinks ul li a i:active {
+section.footerLinks a i:active {
     transform: scale(.98);
 }
-section.footerLinks h1 {
-    text-align: right;
-}
-
 section.footerStart h1,
 section.footerStart p,
 section.footerEnd h1,
@@ -865,7 +861,7 @@ body[data-theme="dark"] {
         color: var(--dark-onSurfaceVariant);
     }
 
-    section.footerLinks ul li a i {
+    section.footerLinks a i {
         color: var(--dark-onSurfaceVariant);
     }
 }
