@@ -48,10 +48,11 @@ html {
 body {
     font-family: "Montserrat", sans-serif;
     transition: all .3s;
-    
     overflow-x: hidden;
 }
-
+.hidden {
+    display: none;
+}
 body[data-theme="light"] {
     background-color: var(--light-surfaceVariant);
 }
@@ -132,13 +133,18 @@ p {
     align-items: center;
     margin-right: 8px;
 }
+@media (max-width: 320px) {
+    .navBar .navLinks {
+        gap: 8px;
+    }
+}
 nav > a {
     transition: all .3s ease;
 }
 .navBar .navLinks a {
     position: relative;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.25rem;
     color: var(--light-inverseSurface);
     transition: all .3s;
     padding: 1.25rem 0;
@@ -212,6 +218,7 @@ body[data-theme="dark"] .navBar img {
 @media (max-width: 720px) {
     .navBar {
         padding: 0 1rem;
+        gap: 8px;
     }
     .navBar .navLinks {
         margin-right: 0;
@@ -219,26 +226,69 @@ body[data-theme="dark"] .navBar img {
     .navBar > a {
         display: none;
     }
+    .navBar .navLinks a {
+        font-size: 1rem;
+    }
 }
-.mode {
-    color: var(--light-primary);
+.switchButton {
+    background-color: var(--light-surfaceVariant);
+    border: 2px solid var(--light-inverseSurface);
+    border-radius: 2rem;
+    color: var(--light);
     cursor: pointer;
-    font-size: 24px;
-    border: 2px solid var(--light-primary);
-    border-radius: 50%;
-    box-shadow: var(--light-shadow-1);
-    transition: all .3s;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1ch;
+    opacity: .8;
+    padding: .5rem;
+    transition: all .3s ease;
 }
-
-.fa-sun {
-    padding: 5px;
+.sun {
+    color: var(--light-primary);
+    transition: all .3s ease;
 }
-
-.fa-moon {
-    padding: 5px 8px;
+.moon {
+    color: var(--light-inverseSurface);
+    transition: all .3s ease;
 }
+.switchButton:hover {
+    opacity: 1;
+    box-shadow: 0 0 15px 1px var(--light-primary);
+    border-color: var(--light-primary);
+}
+.switchButton:focus{
+    outline: none;
+    box-shadow: 0 0 15px 1px var(--light-primary);
+    border-color: var(--light-primary);
+}
+@media (max-width: 640px) {
+    body[data-theme="dark"] .sun {
+        display: none;
+    }
 
-
+    body[data-theme="light"] .moon {
+        display: none;
+    }
+    .switchButton{
+        gap: 0;
+    }
+}
+body[data-theme="dark"] {
+    .switchButton {
+        background-color: var(--dark-surfaceVariant);
+        border-color: var(--dark-inverseSurface);
+    }
+    .sun {
+        color: var(--dark-inverseSurface);
+    }
+    .moon {
+        color: var(--dark-primary);
+    }
+    .switchButton:hover {
+        border-color: var(--dark-primary);
+        box-shadow: 0 0 15px 1px var(--dark-primary);
+    }
+}
 .showing {
     opacity: 1;
     animation-name: showing;
@@ -647,10 +697,10 @@ body[data-theme="dark"] {
 }
 @media (max-width: 768px) {
     .project-card {
-        max-width: 320px;
+        max-width: 300px;
     }
     .project-card img.projectImg {
-        max-width: 320px;
+        max-width: 300px;
     }
 }
 
@@ -786,6 +836,11 @@ textarea:focus {
 @media (min-width: 850px) {
     .Contact form input, textarea {
         min-width: 750px;
+    }
+}
+@media (max-width: 320px) {
+    .Contact form {
+        max-width: 320px;
     }
 }
 /*Contact Ends*/
